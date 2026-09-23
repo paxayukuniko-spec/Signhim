@@ -1,0 +1,6 @@
+{
+  "name": "SignHim",
+  "description": "Entdecke die Hidden Gems der 2. Bundesliga bis zur 5. Liga. Statistisch fundiertes Daten-Scouting mit über 86% verifizierter Erfolgsquote.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

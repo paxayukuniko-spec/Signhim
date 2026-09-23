@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+.app-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr; /* 240px für die Sidebar, der Rest für das Dashboard */
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-content {
+  overflow-y: auto; /* Sorgt dafür, dass nur das Dashboard rechts scrollt */
+  padding: 20px;
+  padding-top: 24px;
+}
+
+.fut-cards-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* Der FUT-Karten-Schild */
+.fut-card {
+  width: 250px;
+  height: 380px; /* Zwingt die Karte auf eine feste, kompakte Größe */
+  background: #0f172a !important; /* Verhindert, dass das Spielerbild im Hintergrund landet */
+  border: 2px solid #00e5ff;
+  border-radius: 12px 12px 80px 80px;
+  position: relative;
+  overflow: hidden; /* Schneidet alles ab, was aus der Karte rausfällt! */
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.15);
+  color: #ffffff;
+}
+
+/* Der Bereich für das Bild */
+.player-image-box {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.player-image-box img {
+  height: 100%;
+  width: auto;
+  object-fit: contain; /* Verhindert das Verzerren des Spielers */
+}
+
+/* Oben links: Rating und Position */
+.fut-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  text-align: center;
+}
+.fut-rating, .fut-rating-gold {
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 0.9;
+  color: #00e5ff;
+}
+.fut-position {
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #00e5ff;
+  opacity: 0.9;
+}
+
+/* Name fett und in modernen Großbuchstaben */
+.fut-player-name, .fut-player-name-gold {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  margin: 6px 0;
+  border-bottom: 1px solid rgba(0, 229, 255, 0.2);
+  width: 100%;
+  text-align: center;
+  padding-bottom: 2px;
+}
+
+/* Die Stats sauber als Grid aufgereiht */
+.fut-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 12px;
+  width: 100%;
+  margin-top: auto;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.stat-value, .stat-value-gold {
+  font-weight: 800;
+  color: #00e5ff; /* Die Werte leuchten Türkis */
+}
+
+.stat-label {
+  font-weight: 400;
+  color: #94a3b8; /* Die Labels sind helles Grau */
+}
+
+
+
+
